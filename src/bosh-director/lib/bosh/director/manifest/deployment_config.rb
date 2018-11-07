@@ -3,6 +3,7 @@ module Bosh::Director
     def initialize(manifest_hash, team_names)
       @manifest_hash = manifest_hash
       @team_names = team_names
+      @instance_groups = parse_instance_groups
     end
 
     def name
@@ -13,8 +14,12 @@ module Bosh::Director
       @team_names
     end
 
+    def parse_instance_groups
+      # TODO
+    end
+
     def instance_groups
-      []
+      @instance_groups
     end
 
     def has_releases?
